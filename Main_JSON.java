@@ -82,7 +82,7 @@ public static void main(String[] args) throws Exception
       		jo.put("age",age);
       		jo.put("sal",sal);
       		ja.add(jo);
-      		FileWriter fw=new FileWriter("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json");
+      		FileWriter fw=new FileWriter("_path_to_json_file_");
       		PrintWriter pw = new PrintWriter(fw); 
             pw.write(ja.toJSONString()); 
             pw.flush();
@@ -92,7 +92,7 @@ public static void main(String[] args) throws Exception
           public static void printDetails() throws Exception
           {
         	  System.out.println("-------------------details----------------------");
-        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json"));
+        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("_path_to_json_file_"));
         	  //System.out.println(ja);
         	  ja.forEach(e -> parseObject((JSONObject)e));  
           }
@@ -114,7 +114,7 @@ public static void main(String[] args) throws Exception
           {
         	  try
         	  {
-        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json"));
+        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("_path_to_json_file_"));
         	  Scanner sc=new Scanner(System.in);
         	  System.out.println("Enter the id of the employee you want to modify");
         	  int id=sc.nextInt();
@@ -131,7 +131,7 @@ public static void main(String[] args) throws Exception
         		  
         		  System.out.println("excpetion occured"+e);
         	  }
-        	 FileWriter fw=new FileWriter("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json");
+        	 FileWriter fw=new FileWriter("_path_to_json_file_");
      		PrintWriter pw = new PrintWriter(fw); 
            pw.write(ja.toJSONString()); 
            pw.flush();
@@ -180,7 +180,7 @@ public static void main(String[] args) throws Exception
         	  Scanner sc=new Scanner(System.in);
         	  System.out.println("Enter the id of the employee you want to delete");
         	  int id=sc.nextInt();
-        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json"));
+        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("_path_to_json_file_"));
         	  Iterator a=ja.iterator();
         	  int count=0;
         	  while(a.hasNext())
@@ -190,7 +190,7 @@ public static void main(String[] args) throws Exception
         			  a.remove();
         		  }
         		  }
-         	 FileWriter fw=new FileWriter("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json");
+         	 FileWriter fw=new FileWriter("_path_to_json_file_");
       		PrintWriter pw = new PrintWriter(fw); 
             pw.write(ja.toJSONString()); 
             pw.flush();
@@ -212,7 +212,7 @@ public static void main(String[] args) throws Exception
         	  System.out.println("Enter the employee you want to search");
         	  Scanner sc=new Scanner(System.in);
         	  int id=sc.nextInt();
-        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("C:\\Users\\saiak\\eclipse-workspace\\JSON_casestudy\\src\\Employee.json"));
+        	  JSONArray ja=(JSONArray) new JSONParser().parse(new FileReader("_path_to_json_file_"));
         	  Iterator a=ja.iterator();
         	  JSONObject jo;
         	  while(a.hasNext())
